@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Noto Sans";
+    cursor: none;
+}
+
+::selection{
+    color: transparent;
+}
+:root {
+    
+    --cursor: invert(96%) sepia(13%) saturate(962%) hue-rotate(2deg) brightness(94%) contrast(81%);
+}
+
+.darkMode {
+    
+    --cursor: invert(82%) sepia(12%) saturate(3978%) hue-rotate(306deg) brightness(144%) contrast(117%);
+}
+
+#cursor {
+    z-index: 9999;
+    filter: var(--cursor);
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 50px;
+    translate: -25px -25px;
+    pointer-events: none;
+}
+
+
+
+
+
+
+
+
+main {
+    /* display: block; */
+    background-color: #FFBB5C;
+    position: relative;
+    height: 100vh;
+    width: auto;
+    overflow: hidden;
+}
+
+.sun_moon {
+    z-index: 1;
+    position: absolute;
+    width: 300px;
+    top: calc(50% - 200px);
+    left: calc(50% - 600px);
+}
+
+.layer0 {
+    z-index: 2;
+    position: absolute;
+    width: 2800px;
+    top: calc(50% - 225px);
+    left: 50%;
+}
+
+.layer1 {
+    z-index: 3;
+    position: absolute;
+    width: 2200px;
+    top: calc(50% - 60px);
+    left: 50%;
+}
+
+.layer2 {
+    z-index: 4;
+    position: absolute;
+    width: 1900px;
+    top: calc(50% - 30px);
+    left: 50%;
+}
+
+.tree {
+    z-index: 5;
+    position: absolute;
+    width: 1300px;
+    top: calc(50% + 50px);
+    left: calc(50% + 600px);
+}
+
+.parallax {
+    pointer-events: none;
+    transition: 0.4s cubic-bezier(.23, .58, .29, .98);
+}
+
+.texture {
+    z-index: 999999;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    mix-blend-mode: multiply;
+    pointer-events: none;
+}
+
+
+
+
+
+
+/* navigation */
