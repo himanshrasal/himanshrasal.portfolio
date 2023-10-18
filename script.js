@@ -16,25 +16,15 @@ window.addEventListener('mousemove', moveCursor)
 
 //----------------------------------------------------------------------------------
 
-//button
-// const btn = document.querySelector('.switch');
-// var lightMode = false;
-// btn.addEventListener('click', (evt) => {
-//   if (!lightMode) {
-//     btn.classList.remove('toggleOff');
-//     btn.classList.add('toggleOn');
-//     lightMode = true;
-//   }
-//   else {
-//     btn.classList.remove('toggleOn');
-//     btn.classList.add('toggleOff');
-//     lightMode = false;
-//   }
+// button
+const theme = document.querySelector('.sun_moon');
 
-//   document.body.classList.toggle('darkMode');
+theme.addEventListener('click', (evt) => {
+  console.log("toggle");
+  document.body.classList.toggle('darkMode');
 
-// }
-// );
+}
+);
 
 
 //--------------------------------------------------------------------------------

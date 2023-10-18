@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans', sans-serif;
+    cursor: none;
+}
+
+::selection{
+    color: black;
+}
+
+:root {
+    --cursor: invert(64%) sepia(41%) saturate(5215%) hue-rotate(179deg) brightness(97%) contrast(94%);
+
+    --color0: #ffbb5c;
+
+    --moon: invert(93%) sepia(86%) saturate(496%) hue-rotate(317deg) brightness(104%) contrast(103%);
+    --moon_spot: invert(93%) sepia(86%) saturate(496%) hue-rotate(317deg) brightness(104%) contrast(103%);
+
+    --color1: invert(72%) sepia(44%) saturate(1581%) hue-rotate(324deg) brightness(105%) contrast(101%);
+    --color2: invert(47%) sepia(15%) saturate(4281%) hue-rotate(334deg) brightness(94%) contrast(88%);
+    --color3: invert(27%) sepia(99%) saturate(1053%) hue-rotate(338deg) brightness(97%) contrast(91%);
+    --color4: invert(8%) sepia(61%) saturate(4822%) hue-rotate(9deg) brightness(96%) contrast(108%);
+}
+
+.darkMode {
+--cursor: invert(40%) sepia(63%) saturate(1131%) hue-rotate(238deg) brightness(102%) contrast(101%);
+
+--color0: #140028;
+
+--moon: invert(97%) sepia(91%) saturate(561%) hue-rotate(330deg) brightness(102%) contrast(101%);
+--moon_spot: invert(85%) sepia(11%) saturate(1009%) hue-rotate(353deg) brightness(104%) contrast(91%);
+
+--color1: invert(11%) sepia(58%) saturate(2226%) hue-rotate(265deg) brightness(94%) contrast(96%);
+--color2: invert(18%) sepia(28%) saturate(1991%) hue-rotate(281deg) brightness(92%) contrast(92%);
+--color3: invert(33%) sepia(33%) saturate(1427%) hue-rotate(301deg) brightness(94%) contrast(83%);
+--color4: invert(9%) sepia(92%) saturate(4025%) hue-rotate(317deg) brightness(76%) contrast(106%);
+}
+
+#cursor {
+    z-index: 9999;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 50px;
+    translate: -25px -25px;
+    pointer-events: none;
+    filter: var(--cursor);
+}
+
+
+
+
+
+
+
+
+main {
+    /* display: block; */
+    background-color: var(--color0);
+    position: relative;
+    height: 100vh;
+    width: auto;
+    overflow: hidden;
+}
+
+.sun_moon {
+    filter: var(--moon);
+    z-index: 10;
+    position: absolute;
+    width: 300px;
+    top: calc(50% - 200px);
+    left: calc(50% - 600px);
+}
+
+.moon_spots{
+    pointer-events: none;
+    filter: var(--moon_spot);
+}
+
+.layer0 {
+    filter: var(--color1);
+    z-index: 2;
+    position: absolute;
+    width: 2800px;
+    top: calc(50% - 125px);
+    left: 50%;
+}
+
+.layer1 {
+    filter: var(--color2);
+    z-index: 3;
+    position: absolute;
+    width: 2200px;
+    top: calc(50% - 60px);
+    left: 50%;
+}
+
+.layer2 {
+    filter: var(--color3);
+    z-index: 4;
+    position: absolute;
+    width: 1900px;
+    top: calc(50% - 30px);
+    left: 50%;
+}
+
+.tree {
+    filter: var(--color4);
+    z-index: 5;
+    position: absolute;
+    width: 1300px;
+    top: calc(50% + 50px);
+    left: calc(50% + 600px);
+}
+
+.parallax {
+    transition: 0.3s cubic-bezier(.23, .58, .29, .98);
+}
+
+.texture {
+    pointer-events: none;
+    z-index: 999999;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    mix-blend-mode: multiply;
+}
+
+
+
+
+
+
+/* navigation */
+
+nav{
+    /* left: 100px; */
+    display: flex;
+    min-height: 100vh;
+    position: absolute;
+    flex-flow: column;
+    justify-content: flex-end;
+}
+
+nav ul{
+    z-index: 500;
+    list-style: none;
+    display: flex;
+    flex-flow: column;
+    min-height: 120px;
+    justify-content: space-between;
+}
+
+nav li{
+    padding: 10px 10px;
+    margin: 10px 10px;
+    background-color: white;
+    border-radius: 20px;
+    text-align: center;
+
+}
+
+nav a{
+    display: block;
+    text-decoration: none;
+}
