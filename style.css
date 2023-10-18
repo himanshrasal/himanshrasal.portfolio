@@ -167,15 +167,3 @@ nav a{
     text-decoration: none;
 }
 
-
-
-.elements{
-    position: absolute;
-    z-index: 500;
-    background-color: white;
-    width: 1200px;
-    height: 600px;
-    pointer-events: all;
-    /* transform: translate(300px, 200px); */
-    border-radius: 50px;
-}
