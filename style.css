@@ -15,8 +15,8 @@
 
     --textcolor: rgb(54, 54, 54);
     --maintextcolor: rgba(0, 0, 0, 0.734);
-    --navhover: rgb(209, 255, 159);
-    --navcolor: rgb(221, 255, 197);
+    --navhover: rgb(226, 255, 195);
+    --navcolor: rgb(255, 255, 255);
 
 
     --cursor: invert(64%) sepia(41%) saturate(5215%) hue-rotate(179deg) brightness(97%) contrast(94%);
@@ -38,17 +38,29 @@
 }
 
 .darkMode {
+    --bodyBG: 0deg, rgb(243, 159, 90) 0%, rgb(174, 68, 90) 100%;
+
+    --textcolor: rgb(54, 54, 54);
+    --maintextcolor: rgba(215, 215, 215, 0.938);
+    --navhover: rgb(219, 255, 180);
+    --navcolor: rgb(255, 255, 255);
+
     --cursor: invert(40%) sepia(63%) saturate(1131%) hue-rotate(238deg) brightness(102%) contrast(101%);
-
-    --color0: #140028;
-
+    
+    --color0: #00011e;
+    
     --moon: invert(97%) sepia(91%) saturate(561%) hue-rotate(330deg) brightness(102%) contrast(101%);
     --moon_spot: invert(85%) sepia(11%) saturate(1009%) hue-rotate(353deg) brightness(104%) contrast(91%);
-
+    
     --color1: invert(11%) sepia(58%) saturate(2226%) hue-rotate(265deg) brightness(94%) contrast(96%);
     --color2: invert(18%) sepia(28%) saturate(1991%) hue-rotate(281deg) brightness(92%) contrast(92%);
     --color3: invert(33%) sepia(33%) saturate(1427%) hue-rotate(301deg) brightness(94%) contrast(83%);
-    --color4: invert(9%) sepia(92%) saturate(4025%) hue-rotate(317deg) brightness(76%) contrast(106%);
+    --color4: invert(8%) sepia(39%) saturate(3457%) hue-rotate(227deg) brightness(88%) contrast(103%);
+    
+    
+    --aboutBG: circle, rgb(153, 84, 114) 0%, rgb(72, 105, 143) 100%;
+    --qualBG: circle, rgb(86, 96, 175) 0%, rgb(167, 79, 113) 100%;
+    --projBG: circle, rgb(58, 134, 60) 0%, rgb(80, 90, 150) 100%;
 }
 
 #cursor {
@@ -203,34 +215,74 @@ nav .navbuttons:hover {
     box-shadow: 0px 0px 0px transparent;
     border: 0px solid transparent;
     text-shadow: 0px 0px 0px transparent;
-
     background: var(--navhover);
 }
 
 
 
+h2{
+    font-family: 'Playpen Sans', cursive;
+    font-size: 3em;
+}
+h3{
+    translate: 100px;
+    font-family: 'Playpen Sans', cursive;
+    font-size: 2em;
+}
+h4{
+    translate: 300px;
+    font-family: 'Playpen Sans', cursive;
+    font-size: 1.5em;
+    
+}
 .pageElements {
-    margin: 20px 20px;
+    margin: 80px 20px;
     border-radius: 50px;
     box-shadow: 0 10px 10px 5px black;
-
+    
 }
+
 
 #ABOUT {
+    position: relative;
     margin-top: 0;
-    height: 2000px;
+    height: 1000px;
     background: radial-gradient(var(--aboutBG));
 }
+.aboutelement{
+    translate: 0 100px;
+}
+.abouttxt{
+    margin: 2em 3em;
+    text-align: center;
+}
+
 
 #QUALIFICATIONS {
-    height: 2000px;
+    position: relative;
+    position: relative;
+    height: 1200px;
     background: radial-gradient(var(--qualBG));
+}
+.qualelement{
+    translate: 0 100px;
+}
+.qualtxt{
+    margin: 0.5em 2em;
 }
 
 #PROJECTS {
+    position: relative;
     height: 2000px;
     background: radial-gradient(var(--projBG));
 }
+
+
+
+
+
+
+
 
 
 
