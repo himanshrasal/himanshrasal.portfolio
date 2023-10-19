@@ -22,7 +22,6 @@ const theme = document.querySelector('.sun_moon');
 theme.addEventListener('click', (evt) => {
   console.log("toggle");
   document.body.classList.toggle('darkMode');
-
 }
 );
 
@@ -47,11 +46,8 @@ function update(cursorX, cursorY) {
 update(0, 0);
 
 window.addEventListener("mousemove", (e) => {
-
   update(e.clientX, e.clientY);
 })
 
 
 //-------------------------------------------------------------------------------
-
-// nav

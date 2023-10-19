@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@800;900&family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@800;900&family=Roboto:wght@500&display=swap"
+        rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
 
@@ -13,36 +14,57 @@
 </head>
 
 <body>
+    <img src="resources/texture.png" class="texture">
 
-    <main>
-        <div class="bgparallax">
-            <img id="cursor" src="resources/cursor.svg" alt="">
+    <div class="wrapper">
+        <main>
+            <div class="bgparallax">
+                <img id="cursor" src="resources/cursor.svg" alt="">
 
-            <img src="resources/background/sun_moon.svg" data-speedx="0.15" data-speedy="0.1"
-                class="sun_moon parallax">
-            <img src="resources/background/moon_spot.svg" data-speedx="0.15" data-speedy="0.1"
-                class="sun_moon moon_spots parallax">
+                <img src="resources/background/sun_moon.svg" data-speedx="0.15" data-speedy="0.1"
+                    class="sun_moon parallax">
+                <img src="resources/background/moon_spot.svg" data-speedx="0.15" data-speedy="0.1"
+                    class="sun_moon moon_spots parallax">
 
-            <img src="resources/background/layer0.svg" data-speedx="0.4" data-speedy="0.05" class="layer0 parallax">
-            <img src="resources/background/layer1.svg" data-speedx="0.3" data-speedy="0.02" class="layer1 parallax">
-            <img src="resources/background/layer2.svg" data-speedx="0.2" data-speedy="0.015"
-                class="layer2 parallax">
-            <img src="resources/background/tree.png" data-speedx="0.1" data-speedy="0.008" class="tree parallax">
-            <img src="resources/texture.png" class="texture">
+                <img src="resources/background/layer0.svg" data-speedx="0.4" data-speedy="0.05" class="layer0 parallax">
+                <img src="resources/background/layer1.svg" data-speedx="0.3" data-speedy="0.02" class="layer1 parallax">
+                <img src="resources/background/layer2.svg" data-speedx="0.2" data-speedy="0.015"
+                    class="layer2 parallax">
+
+                    
+                    <img src="resources/background/tree.png" data-speedx="0.1" data-speedy="0.008" class="tree parallax">
+                </div>
+                
+                <nav>
+                    <ul>
+                        <a href="#ABOUT" class="about navbuttons">ABOUT</a>
+                        <a href="#QUALIFICATIONS" class="qual navbuttons">QUALIFICATIONS</a>
+                        <a href="#PROJECTS" class="proj navbuttons">PROJECTS</a>
+                    </ul>
+                </nav>
+                
+            </main>
+            <h1 class="nametxt parallax" data-speedx="0.1" data-speedy="0.07"">HIMANSH RASAL</h1>
+        
+        <div class="pages">
+            <div id="ABOUT" class="pageElements">
+                
+            </div>
+            
+            <div id="QUALIFICATIONS" class="pageElements">
+                
+            </div>
+
+            <div id="PROJECTS" class="pageElements">
+                
+            </div>
         </div>
 
-        <nav>
-            <ul>
-                <li class="about navbuttons">ABOUT</li>
-                <li class="qual navbuttons">QUALIFICATIONS</li>
-                <li class="proj navbuttons">PROJECTS</li>
-            </ul>
-        </nav>
+        
+        
+    </div>
 
-
-
-
-
+    
     <script src="script.js"></script>
 </body>
 

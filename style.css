@@ -5,11 +5,20 @@
     cursor: none;
 }
 
-::selection{
+
+::selection {
     color: black;
 }
 
 :root {
+    --bodyBG: 0deg, rgba(167,202,214,1) 0%, rgba(196,66,47,1) 100%;
+
+    --textcolor: rgb(54, 54, 54);
+    --maintextcolor: rgba(0, 0, 0, 0.734);
+    --navhover: rgb(209, 255, 159);
+    --navcolor: rgb(221, 255, 197);
+
+
     --cursor: invert(64%) sepia(41%) saturate(5215%) hue-rotate(179deg) brightness(97%) contrast(94%);
 
     --color0: #ffbb5c;
@@ -21,25 +30,31 @@
     --color2: invert(47%) sepia(15%) saturate(4281%) hue-rotate(334deg) brightness(94%) contrast(88%);
     --color3: invert(27%) sepia(99%) saturate(1053%) hue-rotate(338deg) brightness(97%) contrast(91%);
     --color4: invert(8%) sepia(61%) saturate(4822%) hue-rotate(9deg) brightness(96%) contrast(108%);
+
+
+    --aboutBG: circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%;
+    --qualBG: circle, rgba(174, 182, 238, 1) 0%, rgba(233, 148, 181, 1) 100%;
+    --projBG: circle, rgba(149, 255, 152, 1) 0%, rgba(154, 166, 240, 1) 100%;
 }
 
 .darkMode {
---cursor: invert(40%) sepia(63%) saturate(1131%) hue-rotate(238deg) brightness(102%) contrast(101%);
+    --cursor: invert(40%) sepia(63%) saturate(1131%) hue-rotate(238deg) brightness(102%) contrast(101%);
 
---color0: #140028;
+    --color0: #140028;
 
---moon: invert(97%) sepia(91%) saturate(561%) hue-rotate(330deg) brightness(102%) contrast(101%);
---moon_spot: invert(85%) sepia(11%) saturate(1009%) hue-rotate(353deg) brightness(104%) contrast(91%);
+    --moon: invert(97%) sepia(91%) saturate(561%) hue-rotate(330deg) brightness(102%) contrast(101%);
+    --moon_spot: invert(85%) sepia(11%) saturate(1009%) hue-rotate(353deg) brightness(104%) contrast(91%);
 
---color1: invert(11%) sepia(58%) saturate(2226%) hue-rotate(265deg) brightness(94%) contrast(96%);
---color2: invert(18%) sepia(28%) saturate(1991%) hue-rotate(281deg) brightness(92%) contrast(92%);
---color3: invert(33%) sepia(33%) saturate(1427%) hue-rotate(301deg) brightness(94%) contrast(83%);
---color4: invert(9%) sepia(92%) saturate(4025%) hue-rotate(317deg) brightness(76%) contrast(106%);
+    --color1: invert(11%) sepia(58%) saturate(2226%) hue-rotate(265deg) brightness(94%) contrast(96%);
+    --color2: invert(18%) sepia(28%) saturate(1991%) hue-rotate(281deg) brightness(92%) contrast(92%);
+    --color3: invert(33%) sepia(33%) saturate(1427%) hue-rotate(301deg) brightness(94%) contrast(83%);
+    --color4: invert(9%) sepia(92%) saturate(4025%) hue-rotate(317deg) brightness(76%) contrast(106%);
 }
 
 #cursor {
+    transition: 0.1s ease-out;
     z-index: 9999;
-    position: absolute;
+    position: fixed;
     margin: 0;
     padding: 0;
     width: 50px;
@@ -48,6 +63,9 @@
     filter: var(--cursor);
 }
 
+body {
+    background: linear-gradient(var(--bodyBG));
+}
 
 
 
@@ -56,7 +74,6 @@
 
 
 main {
-    /* display: block; */
     background-color: var(--color0);
     position: relative;
     height: 100vh;
@@ -73,7 +90,7 @@ main {
     left: calc(50% - 600px);
 }
 
-.moon_spots{
+.moon_spots {
     pointer-events: none;
     filter: var(--moon_spot);
 }
@@ -105,9 +122,21 @@ main {
     left: 50%;
 }
 
+.nametxt {
+    position: absolute;
+    /* display: block; */
+    top: calc(50% - 20px);
+    left: calc(50% - 320px);
+}
+
+h1 {
+    font-size: 68pt;
+    color: var(--maintextcolor);
+}
+
 .tree {
     filter: var(--color4);
-    z-index: 5;
+    z-index: 6;
     position: absolute;
     width: 1300px;
     top: calc(50% + 50px);
@@ -121,11 +150,11 @@ main {
 .texture {
     pointer-events: none;
     z-index: 999999;
-    position: absolute;
+    position: fixed;
     width: 100vw;
     height: 100vh;
     mix-blend-mode: multiply;
-    opacity: 90%;
+    opacity: 0%8;
 }
 
 
@@ -133,19 +162,17 @@ main {
 
 
 
-/* navigation */
 
-nav{
-    /* left: 100px; */
+nav {
+    z-index: 100;
     display: flex;
     min-height: 100vh;
-    position: absolute;
+    position: fixed;
     flex-flow: column;
     justify-content: flex-end;
 }
 
-nav ul{
-    z-index: 500;
+nav ul {
     list-style: none;
     display: flex;
     flex-flow: column;
@@ -153,17 +180,67 @@ nav ul{
     justify-content: space-between;
 }
 
-nav li{
+.navbuttons {
+    box-shadow: 0px 0px 0px transparent;
+    border: 0px solid transparent;
+    text-shadow: 0px 0px 0px transparent;
+
     padding: 10px 10px;
     margin: 10px 10px;
-    background-color: white;
+    background-color: var(--navcolor);
     border-radius: 20px;
     text-align: center;
 
 }
 
-nav a{
+nav a {
     display: block;
     text-decoration: none;
+    color: var(--textcolor);
 }
 
+nav .navbuttons:hover {
+    box-shadow: 0px 0px 0px transparent;
+    border: 0px solid transparent;
+    text-shadow: 0px 0px 0px transparent;
+
+    background: var(--navhover);
+}
+
+
+
+.pageElements {
+    margin: 20px 20px;
+    border-radius: 50px;
+    box-shadow: 0 10px 10px 5px black;
+
+}
+
+#ABOUT {
+    margin-top: 0;
+    height: 2000px;
+    background: radial-gradient(var(--aboutBG));
+}
+
+#QUALIFICATIONS {
+    height: 2000px;
+    background: radial-gradient(var(--qualBG));
+}
+
+#PROJECTS {
+    height: 2000px;
+    background: radial-gradient(var(--projBG));
+}
+
+
+
+
+html {
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+html::-webkit-scrollbar {
+    display: none;
+}
