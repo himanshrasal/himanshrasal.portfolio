@@ -34,12 +34,13 @@ let xValue = 0, yValue = 0;
 function update(cursorX, cursorY) {
   xValue = cursorX - window.innerWidth / 2;
   yValue = cursorY - window.innerHeight / 2;
+  reduction = 0.08;
 
   parallax_el.forEach(el => {
     let speedx = el.dataset.speedx;
     let speedy = el.dataset.speedy;
 
-    el.style.transform = `translateX(calc(-50% + ${-xValue * speedx}px)) translateY(calc(-50% + ${-yValue * speedy}px))`;
+    el.style.transform = `translateX(calc(-50% + ${-xValue * speedx * reduction}rem)) translateY(calc(-50% + ${-yValue * speedy * reduction}rem))`;
   })
 }
 

@@ -1,0 +1,9 @@
+{
+    "workbench.colorCustomizations": {
+        "minimap.background": "#00000000",
+        "scrollbar.shadow": "#00000000"
+    },
+    "vscode_vibrancy.opacity": 0.5,
+    "vscode_vibrancy.theme": "Tokyo Night Storm",
+    "vscode_vibrancy.type": "acrylic"
+}
