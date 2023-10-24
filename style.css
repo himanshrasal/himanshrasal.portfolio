@@ -98,10 +98,10 @@ main {
 
 .sun_moon {
     filter: var(--moon);
-    z-index: 50;
+    z-index: 1;
+    height: 10vw;
     position: absolute;
-    width: 35vh;
-    top: calc(50% - 20vh);
+    top: calc(50% - 10vw);
     left: calc(50% - 42vw);
 }
 
@@ -110,12 +110,19 @@ main {
     filter: var(--moon_spot);
 }
 
+.sun_moon_button{
+    z-index: 500;
+    border-radius: 20vw;
+    height: 10vw;
+    width: 10vw;
+}
+
 .layer0 {
     filter: var(--color1);
     z-index: 2;
     position: absolute;
     width: 180vw;
-    top: calc(50% - 12vh);
+    top: calc(50% - 3vw);
     left: calc(50%);
 }
 
@@ -124,7 +131,7 @@ main {
     z-index: 3;
     position: absolute;
     width: 160vw;
-    top: calc(50% - 12vh);
+    top: calc(50% - 4vw);
     left: 50%;
 }
 
@@ -133,7 +140,7 @@ main {
     z-index: 4;
     position: absolute;
     width: 150vw;
-    top: calc(50% - 18vh);
+    top: calc(50% - 8vw);
     left: 50%;
 }
 
@@ -141,7 +148,7 @@ main {
     z-index: 60;
     position: absolute;
     display: block;
-    top: calc(50% - 5vh);
+    top: calc(50% - 2vw);
     left: calc(50% - 18vw);
     font-size: 6.5vw;
     color: var(--maintextcolor);
@@ -152,7 +159,7 @@ main {
     z-index: 6;
     position: absolute;
     width: 70vw;
-    top: calc(50% + 10vh);
+    top: calc(50% + 8vw);
     left: calc(50% + 40vw);
 }
 
@@ -166,6 +173,7 @@ main {
     position: fixed;
     width: 100vw;
     height: 100vh;
+    object-fit: cover;
     mix-blend-mode: multiply;
     opacity: 0%8;
 }
@@ -264,9 +272,117 @@ nav .navbuttons:hover {
 
 
 
+@media screen and (max-width: 800px){
+    .sun_moon {
+        top: calc(50% - 3vh)
+    }
+    
+    .layer0 {
+        top: calc(50% + 5vh);
+    }
+    
+    .layer1 {
+        top: calc(50% + 8vh);
+    }
+    
+    .layer2 {
+        top: calc(50% + 2vh);
+    }
+    
+    .nametxt {
+        top: calc(50% - -8vh);
+    }
+    
+    .tree {
+        top: calc(50% + 20vh);
+    }
+}
+
+@media screen and (max-width: 600px){
+    
+    .layer0 {
+        top: calc(50% + 4vh);
+    }
+    
+    .layer1 {
+        top: calc(50% + 6vh);
+    }
+    
+    .layer2 {
+        top: calc(50% + 8vh);
+    }
+    
+    .nametxt {
+        top: calc(50% - -10vh);
+    }
+    
+    .tree {
+        top: calc(50% + 25vh);
+    }
+}
 
 
 
+
+
+@media (orientation: portrait) {
+    main {
+        height: 60vw;
+    }
+    .sun_moon {
+        top: calc(50% - 16vw);
+        left: calc(50% - 40vw);
+    }
+    
+    .layer0 {
+        top: calc(50% - 10vw);
+    }
+    
+    .layer1 {
+        top: calc(50% - 5vw);
+    }
+    
+    .layer2 {
+        top: calc(50% - 8vw);
+    }
+    
+    .nametxt {
+        top: calc(50% - 35vh);
+    }
+    
+    .tree {
+        top: calc(50% - -10vw);
+        width: 60vw;
+    }
+    
+    
+    
+
+
+    
+    .navbuttons {
+        padding: 1.5vh 1vh;
+        margin: 0.5vh 1vh;
+        font-size: 3vw;
+    }
+    
+
+
+
+    .pages{
+        translate: 0;
+    }
+    .pageElements {
+        margin: 5vw 2vw;
+        border-radius: 8vw;
+    }
+    #ABOUT{
+        height: 35vw;
+    }
+    #QUAL{
+        height: 70vw;
+    }
+}
 
 
 
