@@ -343,6 +343,7 @@ nav .navbuttons:hover {
     }
     
     .nametxt {
+        visibility: hidden;
         top: calc(50% - 35vh);
     }
     
