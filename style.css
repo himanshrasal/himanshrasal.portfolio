@@ -321,10 +321,6 @@ nav .navbuttons:hover {
     }
 }
 
-
-
-
-
 @media (orientation: portrait) {
     main {
         height: 60vw;
@@ -377,11 +373,25 @@ nav .navbuttons:hover {
         border-radius: 8vw;
     }
     #ABOUT{
-        height: 35vw;
+        height: 15rem;
     }
+    #ABOUT p{
+        font-size: 1rem;
+    }
+
     #QUAL{
-        height: 70vw;
+        height: 30rem;
     }
+    #QUAL h2{
+        font-size: 1.5rem;
+    }
+    #QUAL h3{
+        font-size: 1rem;
+    }
+    #QUAL p{
+        font-size: 0.75rem;
+    }
+    
 }
 
 
