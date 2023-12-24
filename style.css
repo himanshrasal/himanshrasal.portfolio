@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     font-family: 'Noto Sans', sans-serif;
-    /* cursor: none; */
+    cursor: none;
 }
 
 
@@ -374,14 +374,14 @@ nav .navbuttons:hover {
         border-radius: 8vw;
     }
     #ABOUT{
-        height: 15rem;
+        height: 16rem;
     }
     #ABOUT p{
         font-size: 1rem;
     }
 
     #QUAL{
-        height: 30rem;
+        height: 32rem;
     }
     #QUAL h2{
         font-size: 1.5rem;
