@@ -17,7 +17,7 @@ window.addEventListener('mousemove', moveCursor)
 //----------------------------------------------------------------------------------
 
 // button
-const theme = document.querySelector('.sun_moon_button');
+const theme = document.querySelector('sun_moon_button');
 
 theme.addEventListener('click', (evt) => {
   console.log("toggle");
