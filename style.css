@@ -322,6 +322,10 @@ nav .navbuttons:hover {
 }
 
 @media (orientation: portrait) {
+    #cursor {
+        display: none;
+    }
+
     main {
         height: 60vw;
     }
